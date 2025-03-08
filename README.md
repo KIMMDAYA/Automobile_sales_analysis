@@ -43,35 +43,9 @@ This project analyzes automobile sales data using **SQL and Power BI** to uncove
 ## Data Source
 [Kaggle](https://www.kaggle.com/datasets/ddosad/auto-sales-data)
 
+## Analysis
+[SQL_Query](https://github.com/KIMMDAYA/Automobile_sales_analysis/commit/283757873ec31f00e5f40b2f8a362764675b93da)
 
-
-## Key Insights & Recommendations
-1. **Sales Performance**
-Total Revenue: $9.76M
-Total Orders: 2,747
-Average Order Value: $3.55K
-Total Customers: 89
-2. **Best-Selling Products**
-The Top 10 Products contributed the most revenue.
-Ensuring high stock levels for these products is crucial for revenue growth.
-
- 3. **Sales Trends Over Time**
-Sales increased in Q4, suggesting seasonal demand.
-December had the highest sales, likely due to holiday or end-of-year purchases.
-Capitalize on Q4 sales surge with targeted promotions.
-2019 was the best sales year, but 2020 saw a decline.
- Focus on top-performing products and ensure adequate stock.
-
-5. **Revenue by Deal Size**
-Medium-sized deals generated the most revenue, followed by small deals, then large deals.
-Optimizing pricing and incentives for small & medium deal sizes could improve sales.Offer discounts on medium & small deal sizes to boost sales volume.
-6. **Order Status & Revenue Impact**
-Most sales came from Shipped Orders 
-Cancelled and disputed orders resulted in revenue loss 
-Improving order fulfillment & customer service can reduce lost revenue.
- 7. **Sales by Region**
-Most sales occurred in Europe, with some in Africa & South America.
-Expanding to underperforming regions could drive more sales.
 
 ## Power BI Dashboard Overview
 Dashboard Features:
@@ -84,6 +58,39 @@ Dashboard Features:
 7. Sales by Order Status highlighting revenue loss due to cancellations.
 
 ## Dashboard
-![AUTOMOBILE SALES](https://github.com/user-attachments/assets/d7bda3cf-73e1-41ca-bcd8-29881b95f0ab)
+![AUTOMOBILE SALES](https://github.com/user-attachments/assets/b68ea062-ef85-4ba0-a9d7-5489680670a5)
 
+
+
+
+## Key Insights & Recommendations
+1. **Sales Performance**
+- Total Revenue: $9.76M
+- Total Orders: 2,747
+- Average Order Value: $3.55K
+- Total Customers: 89
+2. **Best-Selling Products**
+The Top 10 Products contributed the most revenue.
+Ensuring high stock levels for these products is crucial for revenue growth.
+
+ 3. **Sales Trends Over Time**
+- Sales increased in Q4, suggesting seasonal demand.
+- December had the highest sales, likely due to holiday or end-of-year purchases.
+- Capitalize on Q4 sales surge with targeted promotions.
+- 2019 was the best sales year, but 2020 saw a decline.
+-  Focus on top-performing products and ensure adequate stock.
+
+5. **Revenue by Deal Size**
+- Medium-sized deals generated the most revenue, followed by small deals, then large deals.
+- Optimizing pricing and incentives for small & medium deal sizes could improve sales.Offer discounts on medium & small deal sizes to boost sales volume.
+6. **Order Status & Revenue Impact**
+- Most sales came from Shipped Orders. 
+- Cancelled and disputed orders resulted in revenue loss 
+- Improving order fulfillment & customer service can reduce lost revenue.
+ 7. **Sales by Region**
+- Most sales occurred in Europe, with some in Africa & South America.
+- Expanding to underperforming regions could drive more sales.
+
+## Conclusion
+This analysis provides valuable business insights into sales trends, product performance, and customer behavior. By implementing the recommendations, the business can increase revenue, improve customer retention, and optimize market expansion strategies. 
 
