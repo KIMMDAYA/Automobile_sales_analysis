@@ -40,6 +40,11 @@ This project analyzes automobile sales data using **SQL and Power BI** to uncove
 | **CONTACTFIRSTNAME**   | First name of the contact person |
 | **DEALSIZE**           | Size of the deal (Small, Medium, Large) |
 
+## Data Source
+[Kaggle](https://www.kaggle.com/datasets/ddosad/auto-sales-data)
+
+
+
 ## Key Insights & Recommendations
 1. **Sales Performance**
 Total Revenue: $9.76M
@@ -79,5 +84,6 @@ Dashboard Features:
 7. Sales by Order Status highlighting revenue loss due to cancellations.
 
 ## Dashboard
-![AUTOMOBILE SALES]
 ![AUTOMOBILE SALES](https://github.com/user-attachments/assets/d7bda3cf-73e1-41ca-bcd8-29881b95f0ab)
+
+
