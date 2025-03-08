@@ -40,107 +40,44 @@ This project analyzes automobile sales data using **SQL and Power BI** to uncove
 | **CONTACTFIRSTNAME**   | First name of the contact person |
 | **DEALSIZE**           | Size of the deal (Small, Medium, Large) |
 
- ## SQL Queries Used
+## Key Insights & Recommendations
+1. **Sales Performance**
+Total Revenue: $9.76M
+Total Orders: 2,747
+Average Order Value: $3.55K
+Total Customers: 89
+2. **Best-Selling Products**
+The Top 10 Products contributed the most revenue.
+Ensuring high stock levels for these products is crucial for revenue growth.
 
-```sql
-1. /*Total Revenue*/
+ 3. **Sales Trends Over Time**
+Sales increased in Q4, suggesting seasonal demand.
+December had the highest sales, likely due to holiday or end-of-year purchases.
+Capitalize on Q4 sales surge with targeted promotions.
+2019 was the best sales year, but 2020 saw a decline.
+ Focus on top-performing products and ensure adequate stock.
 
-SELECT SUM(SALES) AS Total_Revenue 
-FROM Automobile_Sales;
-2. /*Monthly Sales Trend*/
+5. **Revenue by Deal Size**
+Medium-sized deals generated the most revenue, followed by small deals, then large deals.
+Optimizing pricing and incentives for small & medium deal sizes could improve sales.Offer discounts on medium & small deal sizes to boost sales volume.
+6. **Order Status & Revenue Impact**
+Most sales came from Shipped Orders 
+Cancelled and disputed orders resulted in revenue loss 
+Improving order fulfillment & customer service can reduce lost revenue.
+ 7. **Sales by Region**
+Most sales occurred in Europe, with some in Africa & South America.
+Expanding to underperforming regions could drive more sales.
 
-How do sales vary over time (month-to-month)?
+## Power BI Dashboard Overview
+Dashboard Features:
+1. Filters for Order Date, Status, Product Line, Country, and Deal Size.
+2. KPIs: Total Revenue, Total Orders, Avg Order Value, and Total Customers.
+3. Sales Trends: Quarterly and yearly sales trends.
+4. Top 10 Products by total sales.
+5. Sales by City & Region visualized on a map.
+6. Sales by Deal Size using a pie chart.
+7. Sales by Order Status highlighting revenue loss due to cancellations.
 
-SELECT
-   YEAR(ORDERDATE) AS YEAR,
-   MONTH (ORDERDATE) AS MONTH,
-   SUM(SALES) AS Monthly_sales
-   FROM [Auto Sales data]
-GROUP BY YEAR(ORDERDATE), 
-MONTH(ORDERDATE)
-ORDER BY Year, Month ;
-3. /*Top 10 Best-Selling Products*/
-
-SELECT 
-    PRODUCTCODE, 
-    SUM(SALES) AS Total_Sales 
-FROM [Auto Sales data]
-GROUP BY PRODUCTCODE
-ORDER BY Total_Sales DESC
-OFFSET 100 ROWS FETCH NEXT 10 ROWS ONLY;
-
-4. /*Customer Retention Analysis
-How frequently do customers return for purchases?*/
-
-SELECT 
-    CUSTOMERNAME, 
-    COUNT(ORDERNUMBER) AS Total_Orders, 
-    AVG(DAYS_SINCE_LASTORDER) AS Avg_Days_Between_Orders
-FROM [Auto Sales data] 
-GROUP BY CUSTOMERNAME
-ORDER BY Total_Orders DESC;
-
-5. /*Sales Performance by Product Line
-Which product line generates the highest revenue?*/
-SELECT 
-    PRODUCTLINE, 
-    SUM(SALES) AS Total_Sales 
-FROM [Auto Sales data]
-GROUP BY PRODUCTLINE
-ORDER BY Total_Sales DESC;
-
-6. /*Impact of Order Status on Sales*/
-How does order status affect revenue?
-SELECT 
-    STATUS, 
-    COUNT(ORDERNUMBER) AS Total_Orders, 
-    SUM(SALES) AS Total_Sales
-FROM [Auto Sales data]
-GROUP BY STATUS
-ORDER BY Total_Sales DESC;
-
-7./* MSRP vs. Actual Selling Price
-How does the Manufacturer’s Suggested Retail Price (MSRP) compare with the actual selling price?*/
-SELECT 
-    PRODUCTCODE, 
-    AVG(MSRP) AS Avg_MSRP, 
-    AVG(PRICEEACH) AS Avg_Selling_Price, 
-    (AVG(PRICEEACH) / AVG(MSRP)) * 100 AS Selling_Price_Percentage
-FROM [Auto Sales data]
-GROUP BY PRODUCTCODE
-ORDER BY Selling_Price_Percentage DESC;
-
-/*8. Contribution of Deal Sizes to Revenue
-What percentage of total revenue comes from small, medium, and large deals?*/
-SELECT 
-    DEALSIZE, 
-    SUM(SALES) AS Total_Sales, 
-    (SUM(SALES) / (SELECT SUM(SALES) FROM [Auto Sales data]) * 100) AS Percentage_Contribution
-FROM [Auto Sales data]
-GROUP BY DEALSIZE
-ORDER BY Total_Sales DESC;
-
-/*9. Geographical Sales Performance*/
-Which countries generate the highest revenue?
-
-SELECT 
-    COUNTRY, 
-    SUM(SALES) AS Total_Sales
-FROM [Auto Sales data]
-GROUP BY COUNTRY
-ORDER BY Total_Sales DESC;
-
-/*10. Sales Distribution Across Cities
-What are the top cities in terms of sales revenue?*/
- SELECT 
-    CITY, 
-    SUM(SALES) AS Total_Sales
-FROM [Auto Sales data]
-GROUP BY CITY
-ORDER BY Total_Sales DESC
-OFFSET 50 ROWS FETCH NEXT 10 ROWS ONLY;
-
-
-
-
-
+## Dashboard
+![AUTOMOBILE SALES]
+![AUTOMOBILE SALES](https://github.com/user-attachments/assets/d7bda3cf-73e1-41ca-bcd8-29881b95f0ab)
