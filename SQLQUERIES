@@ -1,3 +1,6 @@
+## SQL Queries Used
+
+```sql
 1. /*Total Revenue*/
 
 SELECT SUM(SALES) AS Total_Revenue 
@@ -93,7 +96,5 @@ What are the top cities in terms of sales revenue?*/
 FROM [Auto Sales data]
 GROUP BY CITY
 ORDER BY Total_Sales DESC
-OFFSET 50 ROWS FETCH NEXT 10 ROWS ONLY;
-
-
+OFFSET 50 ROWS FETCH NEXT 10 ROWS ONLY;?
 
